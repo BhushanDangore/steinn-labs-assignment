@@ -1,0 +1,24 @@
+.m-card-wrapper {
+  max-height: 220px;
+  max-width: 120px;
+  background-color: #ffded8;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  img {
+    max-height: 120px;
+    border-radius: 8px;
+  }
+
+  .m-card-song-title {
+    padding: 8px 0;
+    margin: 8px 0;
+    color: rgb(48, 48, 48);
+  }
+}

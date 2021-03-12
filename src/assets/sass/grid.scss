@@ -1,0 +1,23 @@
+.grid-container {
+  display: flex;
+  margin: 10px 2%;
+  flex-direction: column;
+  margin: 1px solid black;
+
+  .grid-title-bar {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 8px 12px;
+  }
+
+  .grid-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.inline {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
+}
