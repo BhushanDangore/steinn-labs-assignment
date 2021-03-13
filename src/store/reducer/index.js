@@ -60,7 +60,7 @@ export default function storeReducer(state, action) {
           }, {})
         : false;
 
-      newState.FeaturedPlaylist = {
+      newState.Genres = {
         ...state.Genres,
         ...newState.Genres,
       };

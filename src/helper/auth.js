@@ -1,4 +1,7 @@
 export function getToken() {
+  const existingToken = localStorage.getItem("token");
+  if (existingToken) return existingToken;
+
   const hash = window.location.hash
     .substring(1)
     .split("&")
@@ -15,6 +18,7 @@ export function getToken() {
   let _token = hash.access_token;
 
   if (_token) {
+    localStorage.setItem("token", _token);
     return _token;
   }
   return false;

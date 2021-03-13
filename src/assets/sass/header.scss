@@ -3,8 +3,17 @@
   width: 100%;
   background-color: #ffb5a7;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   text-align: right;
+
+  h1 {
+    flex: 1;
+    text-align: start;
+    padding: 30px 10px;
+    vertical-align: middle;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
 
   .text-area {
     color: aliceblue;
@@ -12,6 +21,10 @@
     align-items: right;
     justify-content: center;
     flex-direction: column;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
 
     .heading {
       font-size: 2rem;

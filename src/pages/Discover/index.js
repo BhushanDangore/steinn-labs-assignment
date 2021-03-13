@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="main-content">
-      <DiscoverHeader />
+      <DiscoverHeader title="Discover" />
       {NewReleases && (
         <Grid
           items={Object.values(NewReleases)}

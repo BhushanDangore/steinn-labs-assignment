@@ -59,20 +59,24 @@
   vertical-align: middle;
   align-items: center;
 
-  img {
-    width: 30px;
-    max-height: 50%;
-    color: white;
-    margin-right: 10px;
-  }
-
   a {
-    display: block;
+    display: flex;
     color: rgb(255, 255, 255);
     background-color: transparent;
     text-decoration: none;
-    text-transform: capitalize;
-    font-size: 1.1em;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 1.1em;
+    }
+
+    img {
+      width: 30px;
+      max-height: 50%;
+      color: white;
+      margin-right: 10px;
+    }
   }
 
   &.active {
@@ -87,7 +91,9 @@
     justify-content: center;
 
     a {
-      display: none;
+      span {
+        display: none;
+      }
     }
   }
 }

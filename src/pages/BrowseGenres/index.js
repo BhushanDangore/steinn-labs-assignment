@@ -17,10 +17,8 @@ export default function BrowseGenres() {
 
   return (
     <div className="main-content">
-      <DiscoverHeader />
-      {Genres && (
-        <Grid items={Object.values(Genres)} title="Released This Week" />
-      )}
+      <DiscoverHeader title="Genres" />
+      {Genres && <Grid items={Object.values(Genres)} title="Browse Genres" />}
     </div>
   );
 }

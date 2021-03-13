@@ -22,7 +22,7 @@ export default function NewRelease() {
 
   return (
     <div className="main-content">
-      <DiscoverHeader />
+      <DiscoverHeader title="New Released" />
       {NewReleases && (
         <Grid items={Object.values(NewReleases)} title="Released This Week" />
       )}

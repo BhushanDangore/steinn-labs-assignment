@@ -22,11 +22,11 @@ export default function FeaturedPlaylist() {
 
   return (
     <div className="main-content">
-      <DiscoverHeader />
+      <DiscoverHeader title="Featured Playlist" />
       {FeaturedPlaylist && (
         <Grid
           items={Object.values(FeaturedPlaylist)}
-          title="Released This Week"
+          title="Featured Playlist"
         />
       )}
       <Pagination loadMore={loadMore} />

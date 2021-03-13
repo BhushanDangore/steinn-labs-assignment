@@ -1,9 +1,6 @@
 @import "./reset";
 @import "./scrollbar";
-
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 520px;
-
+@import "./constants";
 @import "./navigation";
 @import "./main";
 @import "./header";
