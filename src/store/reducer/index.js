@@ -1,4 +1,9 @@
-import { SET_FEATURED_PLAYLIST, SET_GENRES, SET_NEW_RELEASES } from "../types";
+import {
+  SET_FEATURED_PLAYLIST,
+  SET_GENRES,
+  SET_NEW_RELEASES,
+  SET_TOKEN,
+} from "../types";
 
 // Reducer
 export default function storeReducer(state, action) {
@@ -7,7 +12,6 @@ export default function storeReducer(state, action) {
       let newState = { ...state };
       newState.NewReleases = action.payload
         ? action.payload.reduce((acc, val) => {
-            console.log(val);
             acc[val.id] = {
               name: val.name,
               image: val.images[0].url,
@@ -15,6 +19,11 @@ export default function storeReducer(state, action) {
             return acc;
           }, {})
         : false;
+
+      newState.NewReleases = {
+        ...state.NewReleases,
+        ...newState.NewReleases,
+      };
 
       return newState;
     }
@@ -31,11 +40,15 @@ export default function storeReducer(state, action) {
           }, {})
         : false;
 
+      newState.FeaturedPlaylist = {
+        ...state.FeaturedPlaylist,
+        ...newState.FeaturedPlaylist,
+      };
+
       return newState;
     }
 
     case SET_GENRES: {
-      console.log(action);
       let newState = { ...state };
       newState.Genres = action.payload
         ? action.payload.reduce((acc, val) => {
@@ -47,6 +60,17 @@ export default function storeReducer(state, action) {
           }, {})
         : false;
 
+      newState.FeaturedPlaylist = {
+        ...state.Genres,
+        ...newState.Genres,
+      };
+
+      return newState;
+    }
+
+    case SET_TOKEN: {
+      let newState = { ...state };
+      newState.token = action.payload;
       return newState;
     }
 

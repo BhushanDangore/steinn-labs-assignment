@@ -4,8 +4,8 @@ import classnames from "classnames";
 import SongCard from "../Miniatures/SongCard";
 
 export default function Grid({ items, title, inline }) {
-  const gridItems = items.map((item) => (
-    <SongCard key={item.id} img={item.image} title={item.name} />
+  const gridItems = items.map((item, idx) => (
+    <SongCard key={idx} img={item.image} title={item.name} />
   ));
   return (
     <div className="grid-container">

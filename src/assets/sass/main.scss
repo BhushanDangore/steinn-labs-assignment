@@ -25,3 +25,31 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+.portal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    padding: 1.2em;
+    font-size: 1.4em;
+  }
+
+  a {
+    padding: 10px;
+    margin: 10px;
+    background-color: #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

@@ -1,4 +1,4 @@
-import Home from "./pages/Home";
+import Discover from "./pages/Discover";
 import NewRelease from "./pages/NewRelease";
 import FeaturedPlaylist from "./pages/FeaturedPlaylist";
 import BrowseGenres from "./pages/BrowseGenres";
@@ -13,7 +13,7 @@ const routes = [
   {
     name: "Discover",
     path: "/",
-    component: Home,
+    component: Discover,
     exact: true,
     icon: HomeIcon,
   },

@@ -16,6 +16,7 @@ export default function Home() {
     if (!state.NewReleases) getNewReleases().then(dispatch);
     if (!state.FeaturedPlaylist) getFeaturedPlaylists().then(dispatch);
     if (!state.Genres) getGenres().then(dispatch);
+    // eslint-disable-next-line
   }, []);
 
   const { NewReleases, FeaturedPlaylist, Genres } = state;

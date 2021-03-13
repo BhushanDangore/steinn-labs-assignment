@@ -4,13 +4,19 @@ import DiscoverHeader from "../../components/Miniatures/DiscoverHeader";
 import { getFeaturedPlaylists } from "../../store/actions";
 import { useStoreContext } from "../../store";
 import Grid from "../../components/Miniatures/Grid";
+import Pagination from "../../components/Pagination";
 
 export default function FeaturedPlaylist() {
   const { state, dispatch } = useStoreContext();
 
   useEffect(() => {
     if (!state.FeaturedPlaylist) getFeaturedPlaylists().then(dispatch);
+    // eslint-disable-next-line
   }, []);
+
+  const loadMore = (offset, limit) => {
+    getFeaturedPlaylists({ offset, limit }).then(dispatch);
+  };
 
   const { FeaturedPlaylist } = state;
 
@@ -23,6 +29,7 @@ export default function FeaturedPlaylist() {
           title="Released This Week"
         />
       )}
+      <Pagination loadMore={loadMore} />
     </div>
   );
 }

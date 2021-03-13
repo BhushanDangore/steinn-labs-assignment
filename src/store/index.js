@@ -13,7 +13,6 @@ const initialState = {
 
 function StoreProvider(props) {
   const [state, dispatch] = useReducer(storeReducer, initialState);
-
   return <StoreContext.Provider value={{ state, dispatch }} {...props} />;
 }
 

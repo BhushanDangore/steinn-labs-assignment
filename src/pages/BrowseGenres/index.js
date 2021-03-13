@@ -10,6 +10,7 @@ export default function BrowseGenres() {
 
   useEffect(() => {
     if (!state.Genres) getGenres().then(dispatch);
+    // eslint-disable-next-line
   }, []);
 
   const { Genres } = state;
