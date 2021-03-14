@@ -1,5 +1,5 @@
 export function getToken() {
-  const existingToken = localStorage.getItem("token");
+  const existingToken = sessionStorage.getItem("token");
   if (existingToken) return existingToken;
 
   const hash = window.location.hash
@@ -18,7 +18,7 @@ export function getToken() {
   let _token = hash.access_token;
 
   if (_token) {
-    localStorage.setItem("token", _token);
+    sessionStorage.setItem("token", _token);
     return _token;
   }
   return false;

@@ -9,7 +9,7 @@ export default function Grid({ items, title, inline }) {
       key={idx}
       img={item.image}
       title={item.name}
-      transitionDelay={Math.random().toFixed(2)}
+      transitionDelay={Math.random().toFixed(2) / 4}
     />
   ));
 
